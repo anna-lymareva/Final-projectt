@@ -1,5 +1,4 @@
 import { Component } from '../../../core/Component';
-
 import './Link.scss';
 
 class Link extends Component {
@@ -25,7 +24,10 @@ class Link extends Component {
     const className = this.props.class ? this.props.class : '';
     const href = this.props.href ? this.props.href : '';
     const content = this.props.content;
-    return `<a class=" desktop-menu-link  ${className}" href="${href}">${content}</a>`;
+
+    return `
+        <a class="desktop-menu-link ${className}" href="${href}">${content}</a>
+    `;
   }
 }
 

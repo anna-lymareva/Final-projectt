@@ -1,9 +1,12 @@
-.title {
+.gallery-title {
   text-transform: uppercase;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   font-size: 3rem;
   color: white;
-  padding-bottom: 1%;
+  padding: 3% 0;
 }
 
+.gallery-description {
+  height: 82vh;
+}

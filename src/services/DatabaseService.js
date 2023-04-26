@@ -1,9 +1,9 @@
 import {
-  getFirestore,
-  doc,
-  collection,
   addDoc,
+  collection,
+  getFirestore,
   getDocs,
+  doc,
   getDoc,
   updateDoc,
   deleteDoc,

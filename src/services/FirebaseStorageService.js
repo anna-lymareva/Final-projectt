@@ -8,7 +8,7 @@ class FirebaseStorageService {
 
   uploadFile(file, path) {
     const fileRef = ref(this.storage, `${path}/${file.name}`);
-    return uploadBytes(fileRef, file);
+    return uploadBytes(fileRef,file);
   }
 
   downloadURL(ref) {

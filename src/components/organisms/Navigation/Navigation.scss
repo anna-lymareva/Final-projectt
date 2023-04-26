@@ -1,5 +1,13 @@
+it-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(35, 34, 34);
+
+}
+
 .header-logo-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

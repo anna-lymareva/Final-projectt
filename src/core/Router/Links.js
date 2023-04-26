@@ -29,14 +29,7 @@ export class Link extends Component {
     return `
     <style>
       a {
-        text-decoration: none;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: white;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding-right: 10px;
-        font-size: 1.2rem;
-        scroll-behavior: smooth;
+        text-decoration: none
       }
     </style>  
       <a href="${this.props.to}">

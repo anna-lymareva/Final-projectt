@@ -1,0 +1,18 @@
+.search-button {
+  color: rgb(246, 36, 71);
+  border: 1px solid rgb(246, 36, 71);
+}
+
+.search-button:hover {
+  border: 1px solid rgb(246, 36, 71);
+  color: white;
+  background-color: rgb(246, 36, 71);
+}
+
+// .search-input:focus {
+//   border: 1px solid rgb(246, 36, 71);
+// }
+
+.search-input:focus {
+    box-shadow: 1px 1px 2px  red;
+  }

@@ -22,6 +22,7 @@ export class Component extends HTMLElement {
     } else {
       this.innerHTML = this.render();
     }
+
     this.componentDidMount();
   }
 
@@ -31,8 +32,8 @@ export class Component extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     this.componentWillUpdate(name, oldValue, newValue);
-    this.getAttributeNames().forEach((attributeName) => {
-      this.props[attributeName] = this.getAttribute(attributeName);
+    this.getAttributeNames().forEach((name) => {
+      this.props[name] = this.getAttribute(name);
     });
   }
 
@@ -41,5 +42,3 @@ export class Component extends HTMLElement {
   componentWillUpdate() {}
   render() {}
 }
-
-customElements.define('it-component', Component);

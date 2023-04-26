@@ -13,4 +13,5 @@ class CloudService {
     this.app = initializeApp(this._config);
   }
 }
+
 export const cloudService = new CloudService();

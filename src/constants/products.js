@@ -43,27 +43,6 @@ export const PRODUCTS = [
     },
   },
   {
-    id: 32,
-    title: 'Refined Steel Shoes',
-    price: 532,
-    description:
-      'Bostons most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles',
-    images: [
-      'https://api.lorem.space/image?w=640&h=480&r=3575',
-      'https://api.lorem.space/image?w=640&h=480&r=3275',
-      'https://api.lorem.space/image?w=640&h=480&r=9511',
-    ],
-    creationAt: '2023-01-12T00:47:59.000Z',
-    updatedAt: '2023-01-12T00:47:59.000Z',
-    category: {
-      id: 5,
-      name: 'Others',
-      image: 'https://api.lorem.space/image?w=640&h=480&r=574',
-      creationAt: '2023-01-12T00:47:59.000Z',
-      updatedAt: '2023-01-12T00:47:59.000Z',
-    },
-  },
-  {
     id: 33,
     title: 'Sleek Soft Table',
     price: 337,
@@ -372,27 +351,6 @@ export const PRODUCTS = [
       id: 2,
       name: 'Electronics',
       image: 'https://api.lorem.space/image/watch?w=640&h=480&r=5692',
-      creationAt: '2023-01-12T00:47:59.000Z',
-      updatedAt: '2023-01-12T00:47:59.000Z',
-    },
-  },
-  {
-    id: 49,
-    title: 'Generic Cotton Sausages',
-    price: 156,
-    description:
-      'Bostons most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles',
-    images: [
-      'https://api.lorem.space/image/fashion?w=640&h=480&r=1164',
-      'https://api.lorem.space/image/fashion?w=640&h=480&r=1953',
-      'https://api.lorem.space/image/fashion?w=640&h=480&r=4315',
-    ],
-    creationAt: '2023-01-12T00:47:59.000Z',
-    updatedAt: '2023-01-12T00:47:59.000Z',
-    category: {
-      id: 1,
-      name: 'Clothes',
-      image: 'https://api.lorem.space/image/fashion?w=640&h=480&r=7742',
       creationAt: '2023-01-12T00:47:59.000Z',
       updatedAt: '2023-01-12T00:47:59.000Z',
     },
@@ -768,27 +726,6 @@ export const PRODUCTS = [
       id: 1,
       name: 'Clothes',
       image: 'https://api.lorem.space/image/fashion?w=640&h=480&r=7742',
-      creationAt: '2023-01-12T00:47:59.000Z',
-      updatedAt: '2023-01-12T00:47:59.000Z',
-    },
-  },
-  {
-    id: 69,
-    title: 'Licensed Granite Ball',
-    price: 658,
-    description:
-      'Bostons most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles',
-    images: [
-      'https://api.lorem.space/image/shoes?w=640&h=480&r=2152',
-      'https://api.lorem.space/image/shoes?w=640&h=480&r=1530',
-      'https://api.lorem.space/image/shoes?w=640&h=480&r=7223',
-    ],
-    creationAt: '2023-01-12T00:47:59.000Z',
-    updatedAt: '2023-01-12T00:47:59.000Z',
-    category: {
-      id: 4,
-      name: 'Shoes',
-      image: 'https://api.lorem.space/image/shoes?w=640&h=480&r=1623',
       creationAt: '2023-01-12T00:47:59.000Z',
       updatedAt: '2023-01-12T00:47:59.000Z',
     },

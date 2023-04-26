@@ -1,5 +1,6 @@
 import { APP_EVENTS } from '../constants/appEvents';
 import { eventEmmiter } from '../core/EventEmmiter';
+
 class StorageService {
   constructor() {
     this.storage = window.localStorage;

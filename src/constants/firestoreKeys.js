@@ -1,5 +1,5 @@
 export const FIRESTORE_KEYS = {
-  user: 'user',
-  service: 'service',
+  categories: 'categories',
+  products: 'products',
   posts: 'posts',
 };

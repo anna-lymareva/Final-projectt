@@ -1,8 +1,6 @@
 import { Component } from '../../../core/Component';
+import '../../../core/Router/Link';
 import '../../atoms/Link';
-import '../../../core/Router/Links';
-
-import './MenuItems.scss';
 
 class MenuItems extends Component {
   static get observedAttributes() {
@@ -22,21 +20,24 @@ class MenuItems extends Component {
     const items = JSON.parse(this.props.items);
 
     return `
-         <ul class="navbar-nav ">
-           ${items
-             .map((item) => {
-               return `
-               <li class="nav-item">
-               <route-link to="${item.href}">
-                  <it-link class="${this.isActive(item) ? 'active' : ''}"
-                  href="${item.href ? item.href : ''}" content="${item.label}"></it-link>
-                </route-link>  
-               </li>
-               `;
-             })
-             .join('')}
-         </ul>
-         `;
+      <ul class="navbar-nav">
+        ${items
+          .map((item) => {
+            return `
+              <li class="nav-item">
+                <route-link to="${item.href}">
+                  <it-link 
+                    class="${this.isActive(item) ? 'active' : ''}"
+                    href="${item.href ? item.href : ''}"
+                    content="${item.label}"
+                  ></it-link>
+                </route-link>
+              </li>
+            `;
+          })
+          .join(' ')}  
+      </ul>
+        `;
   }
 }
 

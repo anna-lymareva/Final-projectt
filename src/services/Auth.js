@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
 import { cloudService } from './CloudService';
@@ -23,6 +24,10 @@ class AuthService {
         },
       );
     });
+  }
+
+  signIn(email, password) {
+    return signInWithEmailAndPassword(this.auth, email, password);
   }
 
   signUp(email, password) {

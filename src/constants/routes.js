@@ -1,12 +1,48 @@
 import { APP_ROUTES } from './appRoutes';
 
 export const routes = {
-  about: { href: APP_ROUTES.about, component: 'about-page' },
-  gallery: { href: APP_ROUTES.gallery, component: 'gallery-page' },
-  services: { href: APP_ROUTES.services, component: 'services-page' },
-  contacts: { href: APP_ROUTES.contacts, component: 'contacts-page' },
-  team: { href: APP_ROUTES.team, component: 'team-page' },
-  admin: { href: APP_ROUTES.admin, component: 'admin-page' },
-  registration: { href: APP_ROUTES.registration, component: 'registration-page' },
-  error: { href: '*', component: 'error-page' },
+  about: {
+    href: APP_ROUTES.about,
+    component: 'about-page',
+  },
+  catalog: {
+    href: APP_ROUTES.catalog,
+    component: 'catalog-page',
+  },
+  contacts: {
+    href: APP_ROUTES.contacts,
+    component: 'contacts-page',
+  },
+  cart: {
+    href: APP_ROUTES.cart,
+    component: 'cart-page',
+  },
+  gallery: {
+    href: APP_ROUTES.gallery,
+    component: 'gallery-page',
+  },
+  productView: {
+    href: APP_ROUTES.product,
+    component: 'product-page',
+  },
+  admin: {
+    href: APP_ROUTES.admin,
+    component: 'admin-page',
+  },
+  signUp: {
+    href: APP_ROUTES.signUp,
+    component: 'sign-up-page',
+  },
+  signIn: {
+    href: APP_ROUTES.signIn,
+    component: 'sign-in-page',
+  },
+  signOut: {
+    href: APP_ROUTES.signOut,
+    component: 'sign-out-page',
+  },
+  error: {
+    href: '*',
+    component: 'error-page',
+  },
 };

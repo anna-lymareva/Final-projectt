@@ -3,8 +3,8 @@ import { Component } from '../../../core/Component';
 class ErrorPage extends Component {
   render() {
     return `
-         <h1>ErrorPage</h1>
-      `;
+            <h1>ErrorPage<h1>
+        `;
   }
 }
 

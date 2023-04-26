@@ -4,13 +4,16 @@ export class ApiService {
   }
 
   post(url = '', body, options = {}) {
-    return fetch(this._baseURL + url, { method: 'POST', body, ...options }).then((response) =>
-      response.json(),
-    );
+    return fetch(this._baseURL + url, {
+      method: 'POST',
+      body,
+      ...options,
+    }).then((response) => response.json());
   }
 
   get(url = '', params = {}, options = {}) {
     const queryParam = new URLSearchParams(params);
+
     return fetch(`${this._baseURL + url}?${queryParam.toString()}`, {
       method: 'GET',
       ...options,
