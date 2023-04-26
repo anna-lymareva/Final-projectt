@@ -1,0 +1,20 @@
+.next-link,
+.number-link,
+.previous-link {
+  color: rgb(246, 36, 71);
+  background-color: transparent;
+}
+
+.page-link {
+  background-color: rgb(246, 36, 71);
+  color: rgb(246, 36, 71);
+
+}
+
+.next-link:hover,
+.number-link:hover,
+.previous-link:hover {
+  background-color: white;
+  color: rgb(246, 36, 71);
+  font-weight: 600;
+}

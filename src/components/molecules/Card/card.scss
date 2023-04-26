@@ -1,11 +1,47 @@
-@import '../../../scss/mixins.scss';
-
-.fix-line-of-description {
-  @include sliceByLine;
-  min-height: 72px
+.card {
+  background-color: transparent;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 1px 1px 50px black;
+  min-width: 300px;
 }
 
-.fix-line-of-title {
-  @include sliceByLine(2);
-  min-height: 48px;
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-text {
+  color: white;
+  padding-bottom: 15%;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.card-title {
+  color: rgb(246, 36, 71);
+}
+
+.card-btn {
+  color: white;
+  border-radius: 10px;
+  border: 3px solid white;
+  font-size: 1.1rem;
+}
+
+.card-btn:hover {
+  background-color: rgb(246, 36, 71);
+  color: white;
+}
+
+.price-info {
+  border-top: 3px solid rgb(246, 36, 71);
 }
