@@ -77,14 +77,6 @@ class ProductForm extends Component {
             <input name="price" type="number" class="form-control" required>
           </label>
         </div>
-
-        <div class="mb-3">
-          <label class="form-label w-100">
-            <p>Product Description</p>
-            <textarea name="description" class="form-control" rows="3" required></textarea>
-          </label>
-        </div>
-
         <button type="submit" class="btn btn-primary">Save</button>
       </form>
     `;

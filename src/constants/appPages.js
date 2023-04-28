@@ -6,8 +6,8 @@ export const appPages = [
     href: APP_ROUTES.about,
   },
   {
-    label: 'Каталог',
-    href: APP_ROUTES.catalog,
+    label: 'Услуги',
+    href: APP_ROUTES.service,
   },
   {
     href: APP_ROUTES.gallery,
@@ -18,8 +18,8 @@ export const appPages = [
     label: 'Контакты',
   },
   {
-    href: APP_ROUTES.cart,
-    label: 'Корзина',
+    href: APP_ROUTES.event,
+    label: 'Онлайн запись',
   },
   {
     href: APP_ROUTES.admin,
@@ -27,14 +27,14 @@ export const appPages = [
   },
   {
     href: APP_ROUTES.signUp,
-    label: 'Sign Up',
+    label: 'Регистрация',
   },
   {
     href: APP_ROUTES.signIn,
-    label: 'Sign In',
+    label: 'Вход',
   },
   {
     href: APP_ROUTES.signOut,
-    label: 'Sign Out',
+    label: 'Выход',
   },
 ];

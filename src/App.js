@@ -1,13 +1,11 @@
 import { Component } from './core/Component';
 import './core/Router/Router';
 import { routes } from './constants/routes';
-
 import './components/organisms/Navigation';
-// import './components/pages/BlogPage';
 import './components/pages/AboutPage';
 import './components/pages/GalleryPage';
-import './components/pages/CartPage';
-import './components/pages/CatalogPage';
+import './components/pages/EventPage';
+import './components/pages/ServicePage';
 import './components/pages/ContactsPage';
 import './components/pages/ErrorPage';
 import './components/pages/ProductPage';
@@ -88,9 +86,9 @@ class App extends Component {
           </app-route>
 
           <app-route 
-            path="${routes.catalog.href}" 
-            title="Catalog" 
-            component="${routes.catalog.component}">
+            path="${routes.service.href}" 
+            title="Service" 
+            component="${routes.service.component}">
           </app-route>
 
           <app-route 
@@ -100,9 +98,9 @@ class App extends Component {
           </app-route>
 
           <app-route 
-            path="${routes.cart.href}" 
-            title="Cart" 
-            component="${routes.cart.component}">
+            path="${routes.event.href}" 
+            title="Event" 
+            component="${routes.event.component}">
           </app-route>
 
           <app-route 

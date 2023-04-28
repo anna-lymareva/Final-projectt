@@ -4,7 +4,7 @@ import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { storageService } from '../../../services/StorageService';
 
-class CartPage extends Component {
+class EventPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -71,46 +71,19 @@ class CartPage extends Component {
   render() {
     return `
       <div class="container">
-        <table class="table mt-3">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Preview</th>
-            <th scope="col">Description</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${this.state.products
-            .map((item, index) => {
-              return `
-              <tr>
-                <td>${index + 1}</td>
-                <td>${item.title}</td>
-                <td>
-                  <img
-                    class="image-fit"
-                    src="${item.image}"
-                    alt="image"
-                  />
-                </td>
-                <td>${item.description}</td>
-                <td>${item.price} BYN</td>
-                <td>${item.quantity}</td>
-                <td>
-                  <button class="btn btn-danger" data-id="${item.id}">Delete</button>
-                </td>
-              </tr>
-            `;
-            })
-            .join(' ')}
-        </tbody>
-      </table>
+      <form class="form">
+      <input type="text" id="name" placeholder="Name">
+      <input type="number" id="attendee" placeholder="Attendees">
+      <textarea id="description" cols="30" rows="10" placeholder="Description..."></textarea>
+      <select id="status">
+          <option value="0">Free</option>
+          <option value="1">Paid</option>
+      </select>
+      <button class="btn btn-primary">Save</button>
+  </form>
       </div>  
       `;
   }
 }
 
-customElements.define('cart-page', CartPage);
+customElements.define('event-page', EventPage);

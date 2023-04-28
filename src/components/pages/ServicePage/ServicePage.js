@@ -1,16 +1,15 @@
 import { Component } from '../../../core/Component';
-import '../../molecules/Sidebar';
 import '../../molecules/Pagination';
 import '../../organisms/CardList';
 import '../../templates/CatalogControls';
-import '../../../widgets/Weather/Weather';
+import './ServicePage.scss';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { APP_EVENTS } from '../../../constants/appEvents';
 import { CATEGORIES } from '../../../constants/categories';
 import { databaseService } from '../../../services/DatabaseService';
 import { FIRESTORE_KEYS } from '../../../constants/firestoreKeys';
 
-class CatalogPage extends Component {
+class ServicePage extends Component {
   constructor() {
     super();
     this.state = {
@@ -96,13 +95,13 @@ class CatalogPage extends Component {
   render() {
     return `
     <catalog-controls categories='${JSON.stringify(CATEGORIES)}'></catalog-controls>
-    <div class="container mt-5 pt-5 border-top">
+    <div class="container mt-5 border-top">
         <div class="row mt-5">
-          <div class='col-sm-9'>
+          <div class="services-description">
             <card-list products='${JSON.stringify(
               this.sliceData(this.state.currentPage),
             )}'></card-list>
-            <div class='mt-5'>
+            <div class=''>
               <it-pagination 
                 total="${this.state.products.length}"
                 limit="${this.state.limit}"
@@ -116,4 +115,4 @@ class CatalogPage extends Component {
   }
 }
 
-customElements.define('catalog-page', CatalogPage);
+customElements.define('service-page', ServicePage);

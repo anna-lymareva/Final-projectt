@@ -40,7 +40,7 @@ class SignInPage extends Component {
     try {
       const user = await authService.signIn(data.email, data.password);
       eventEmmiter.emit(APP_EVENTS.authorizeUser, { user });
-      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.catalog });
+      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.service });
     } catch (error) {
       this.setError(error.message);
     } finally {
@@ -61,7 +61,7 @@ class SignInPage extends Component {
 
     return `
         <it-preloader is-loading="${this.state.isLoading}">
-            <div class="container mt-5">
+            <div class="container">
                 <h1 class="text-center mt-5">Sign In</h1>
                 <div class="row justify-content-center mt-5">
                     <div class="col-6">

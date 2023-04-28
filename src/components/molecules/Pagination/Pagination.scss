@@ -3,12 +3,14 @@
 .previous-link {
   color: rgb(246, 36, 71);
   background-color: transparent;
+  border: none;
+
 }
 
-.page-link {
+.page-link.active {
   background-color: rgb(246, 36, 71);
-  color: rgb(246, 36, 71);
-
+  color: white;
+  border: none;
 }
 
 .next-link:hover,

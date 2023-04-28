@@ -7,7 +7,7 @@ import './card.scss';
 
 class Card extends Component {
   static get observedAttributes() {
-    return ['image', 'title', 'description', 'price', 'id'];
+    return ['image', 'title', 'price', 'id'];
   }
 
   addToCart = (evt) => {
@@ -15,8 +15,8 @@ class Card extends Component {
       const allItems = storageService.getItem(APP_STORAGE_KEYS.cartData) ?? [];
       storageService.setItem(APP_STORAGE_KEYS.cartData, [...allItems, this.props]);
     }
-    if (evt.target.closest('.card')) {
-      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: `catalog/${this.props.id}` });
+    if (evt.target.closest('.card-btn')) {
+      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: `sign-up` });
     }
   };
 
@@ -29,19 +29,18 @@ class Card extends Component {
   }
 
   render() {
-    const { image, title, description, price } = this.props;
+    const { image, title, price } = this.props;
 
     return `
       <div class="card">
         <img class="card-image" src="${image}" alt="image">
         <div class="card-body">
-          <h5 class="card-title">${title}</h5>
-          <p class="card-text">${description}</p>
-          <div class='price-info d-flex justify-content-between align-items-center pt-2'>
+          <h5 class="card-title pb-5">${title}</h5>
+          <div class='price-info d-flex justify-content-between align-items-center pt-3'>
             <strong class="card-price mb-0">
               ${price} BYN
             </strong>
-            <button class="card-btn btn">Купить</button>
+            <button class="card-btn btn">Записаться</button>
           </div>
         </div>
       </div>

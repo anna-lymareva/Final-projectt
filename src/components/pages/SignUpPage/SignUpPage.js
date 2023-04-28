@@ -1,5 +1,4 @@
 import { Component } from '../../../core/Component';
-
 import '../../organisms/RegisterForm';
 import '../../molecules/Preloader';
 import { eventEmmiter } from '../../../core/EventEmmiter';
@@ -40,7 +39,7 @@ class SignUpPage extends Component {
     try {
       const user = await authService.signUp(data.email, data.password);
       eventEmmiter.emit(APP_EVENTS.authorizeUser, { user });
-      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.catalog });
+      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.service });
     } catch (error) {
       this.setError(error.message);
     } finally {
@@ -60,7 +59,7 @@ class SignUpPage extends Component {
     const message = this.state.errorMessage;
     return `
         <it-preloader is-loading="${this.state.isLoading}">
-            <div class="container mt-5">
+            <div class="container">
                 <h1 class="text-center mt-5">Sign Up</h1>
                 <div class="row justify-content-center mt-5">
                     <div class="col-6">

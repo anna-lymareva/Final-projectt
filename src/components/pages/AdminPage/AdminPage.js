@@ -7,7 +7,6 @@ import { forms, menuItems } from './constants';
 import '../../molecules/Tabs';
 import '../../molecules/Tabs';
 import '../../molecules/Preloader';
-import '../../organisms/BlogForm';
 import '../../organisms/CategoryForm';
 import '../../organisms/ProductForm';
 import { FIRESTORE_KEYS } from '../../../constants/firestoreKeys';

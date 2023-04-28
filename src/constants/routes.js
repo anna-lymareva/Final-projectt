@@ -5,17 +5,17 @@ export const routes = {
     href: APP_ROUTES.about,
     component: 'about-page',
   },
-  catalog: {
-    href: APP_ROUTES.catalog,
-    component: 'catalog-page',
+  service: {
+    href: APP_ROUTES.service,
+    component: 'service-page',
   },
   contacts: {
     href: APP_ROUTES.contacts,
     component: 'contacts-page',
   },
-  cart: {
-    href: APP_ROUTES.cart,
-    component: 'cart-page',
+  event: {
+    href: APP_ROUTES.event,
+    component: 'event-page',
   },
   gallery: {
     href: APP_ROUTES.gallery,

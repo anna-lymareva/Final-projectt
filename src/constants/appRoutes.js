@@ -1,10 +1,10 @@
 export const APP_ROUTES = {
   about: '/',
-  catalog: '/catalog',
+  service: '/service',
   gallery: '/gallery',
   contacts: '/contacts',
-  cart: '/cart',
-  product: '/catalog/:id',
+  event: '/event',
+  product: '/cart',
   admin: '/admin',
   signUp: '/sign-up',
   signIn: '/sign-in',

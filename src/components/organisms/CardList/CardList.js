@@ -20,7 +20,6 @@ class CardList extends Component {
                         image='${item.preview}'
                         title='${item.title}'
                         price='${item.price}'
-                        description='${item.description}'
                         id="${item.id}"
                     ></it-card>
                 </div>

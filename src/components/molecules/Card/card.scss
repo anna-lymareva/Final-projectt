@@ -4,12 +4,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 1px 1px 50px black;
   min-width: 300px;
+  min-height: 500px;
 }
 
 .card-image {
   width: 100%;
   border-radius: 10px;
   padding: 2%;
+  height: 300px;
 }
 
 .card-body {
@@ -22,8 +24,8 @@
 }
 
 .card-price {
+  color: rgb(246, 36, 71);
   font-size: 1.1rem;
-  color: white;
 }
 
 .card-title {
@@ -43,5 +45,5 @@
 }
 
 .price-info {
-  border-top: 3px solid rgb(246, 36, 71);
+  border-top: 3px solid white;
 }
