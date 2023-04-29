@@ -12,44 +12,29 @@ import '../../atoms/HeaderLogo';
 import { ADMIN } from '../../../constants/userRoles';
 
 class Navigation extends Component {
-  constructor() {
-    super();
-    this.state = {
-      productsCount: 0,
-    };
-  }
-
   static get observedAttributes() {
     return ['user'];
   }
 
   getItems() {
     const user = JSON.parse(this.props.user);
+    console.log(user);
     if (user) {
       if (user.email === ADMIN) {
         return appPages.filter((menuItem) => {
-          return [APP_ROUTES.signUp, APP_ROUTES.signIn, APP_ROUTES.signOut].every(
-            (item) => item !== menuItem.href,
-          );
+          return [APP_ROUTES.signUp, APP_ROUTES.signIn].every((item) => item !== menuItem.href);
         });
       } else {
         return appPages.filter((menuItem) => {
-          return [APP_ROUTES.signUp, APP_ROUTES.signIn, APP_ROUTES.signOut].every(
-            (item) => item !== menuItem.href,
-          );
+          return [APP_ROUTES.signUp, APP_ROUTES.signIn].every((item) => item !== menuItem.href);
         });
       }
     } else {
       return appPages.filter((menuItem) => {
-        return [APP_ROUTES.signOut, APP_ROUTES.admin, APP_ROUTES.signUp, APP_ROUTES.signIn].every(
-          (item) => item !== menuItem.href,
-        );
+        return [APP_ROUTES.signOut, APP_ROUTES.admin].every((item) => item !== menuItem.href);
       });
     }
   }
-  // componentDidMount() {
-  //   this.addEventListener()
-  // }
 
   render() {
     return `
@@ -58,7 +43,7 @@ class Navigation extends Component {
           <div class="header-logo-nav collapse navbar-collapse d-flex justify-content-between">
           <header-logo></header-logo>
           <menu-items 
-              items='${JSON.stringify(appPages)}'
+              items='${JSON.stringify(this.getItems())}'
             ></menu-items>
           </div>
         </div>

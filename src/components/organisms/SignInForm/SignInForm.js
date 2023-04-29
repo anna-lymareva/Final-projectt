@@ -2,6 +2,7 @@ import { Component } from '../../../core/Component';
 import { getFormData } from '../../../utils/form';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { APP_EVENTS } from '../../../constants/appEvents';
+import './SignInForm.scss';
 
 class SignInForm extends Component {
   constructor() {

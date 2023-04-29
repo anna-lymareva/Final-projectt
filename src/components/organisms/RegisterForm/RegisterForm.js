@@ -2,6 +2,7 @@ import { Component } from '../../../core/Component';
 import { getFormData } from '../../../utils/form';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { APP_EVENTS } from '../../../constants/appEvents';
+import './RegisterForm.scss';
 
 class RegisterForm extends Component {
   constructor() {
@@ -50,11 +51,11 @@ class RegisterForm extends Component {
 
   render() {
     return `
-    <form>
-      <div class="mb-3">
-        <label class="form-label w-100">
-          <p>Email<p>
-          <input name="email" type="emails" class="form-control">
+    <form class="register-form">
+      <div class="register">
+        <label class="register-label form-label w-100">
+          <p class="register-text">Email<p>
+          <input name="email" type="emails" class="register-input form-control">
         </label>
         ${
           this.state.errors.email
@@ -66,20 +67,26 @@ class RegisterForm extends Component {
             : ''
         }
       </div>
-      <div class="mb-3">
-        <label class="form-label w-100">
-          <p>Password<p>
-          <input name="password" type="password" class="form-control" required>
+      <div class="register">
+        <label class="register-label form-label w-100">
+          <p class="register-text">Введите номер телефона<p>
+          <input name="phone" type="tel" class="register-input form-control" required>
         </label>
       </div>
-      <div class="mb-3">
-        <label class="form-label w-100">
-          <p>Confirm Password<p>
-          <input name="confirm-password" type="password" class="form-control" required>
+      <div class="register">
+        <label class="register-label form-label w-100">
+          <p class="register-text">Введите пароль<p>
+          <input name="password" type="password" class="register-input form-control" required>
+        </label>
+      </div>
+      <div class="register">
+        <label class="register-label form-label w-100">
+          <p class="register-text">Повторите пароль<p>
+          <input name="confirm-password" type="password" class="register-input form-control" required>
         </label>
       </div>
 
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn">Зарегистрироваться</button>
     </form>
     `;
   }

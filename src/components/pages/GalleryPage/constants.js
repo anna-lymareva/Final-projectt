@@ -1,8 +1,12 @@
 export const slides = [
+  '<img src="../../../assets/images/12.jpg" alt="image">',
   '<img src="../../../assets/images/1.jpg" alt="image">',
   '<img src="../../../assets/images/2.jpg" alt="image">',
-  '<img src="../../../assets/images/3.webp" alt="image">',
+  '<img src="../../../assets/images/13.jpg" alt="image">',
+  '<img src="../../../assets/images/10.png" alt="image">',
   '<img src="../../../assets/images/4.jpg" alt="image">',
+  '<img src="../../../assets/images/3.webp" alt="image">',
+  '<img src="../../../assets/images/11.jpg" alt="image">',
   '<img src="../../../assets/images/5.jpg" alt="image">',
   '<img src="../../../assets/images/6.webp" alt="image">',
   '<img src="../../../assets/images/7.jpeg" alt="image">',

@@ -1,11 +1,13 @@
 import { Component } from '../../../core/Component';
 import './AboutPage.scss';
 // import { slides } from './constants';
+import '../../molecules/Slider';
 
 class AboutPage extends Component {
   render() {
     return `
     <header>
+
          <div class="header-description">
               <div class="header-title">
                   <p class="header-slide">You are beautiful</p>              

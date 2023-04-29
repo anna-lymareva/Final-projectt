@@ -26,3 +26,24 @@ about-page {
   background-size: cover;
   background-position: center;
 }
+
+sign-in-page {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba(41, 40, 40, 0.859), rgba(0, 0, 0, 0.437)),
+    url('./assets/images/signIn.jpg');
+  display: block;
+  height: 82vh;
+  background-size: cover;
+  background-position: center;
+}
+
+sign-up-page {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba(41, 40, 40, 0.859), rgba(0, 0, 0, 0.437)),
+    url('./assets/images/signIn.jpg');
+  display: block;
+  height: 82vh;
+  padding-top: 5%;
+  background-size: cover;
+  background-position: center;
+}

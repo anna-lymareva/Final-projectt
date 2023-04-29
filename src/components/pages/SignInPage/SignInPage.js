@@ -1,5 +1,5 @@
 import { Component } from '../../../core/Component';
-
+import './SignInPage.scss';
 import '../../organisms/SignInForm';
 import '../../molecules/Preloader';
 import { eventEmmiter } from '../../../core/EventEmmiter';
@@ -62,10 +62,10 @@ class SignInPage extends Component {
     return `
         <it-preloader is-loading="${this.state.isLoading}">
             <div class="container">
-                <h1 class="text-center mt-5">Sign In</h1>
-                <div class="row justify-content-center mt-5">
+                <h1 class="text-center title">Вход</h1>
+                <div class="row justify-content-center ">
                     <div class="col-6">
-                        <div class="border p-5">
+                        <div class=" p-5">
                             <div class="invalid-feedback d-block">${message}</div>
                             <sign-in-form></sign-in-form>
                         </div>

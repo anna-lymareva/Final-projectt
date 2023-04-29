@@ -4,7 +4,7 @@ import './Footer.scss';
 class Footer extends Component {
   render() {
     return `
-    <div class="container ">
+    <div class="container footer">
      <footer class="container d-flex justify-content-between border-top ">    
        <div class="d-flex flex-column flex-sm-row justify-content-between m-0 pt-2">
          <p style="color:rgb(246, 36, 71)">© 2022 Company, Inc. All rights reserved.</p>         
