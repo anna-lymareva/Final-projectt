@@ -4,6 +4,7 @@ export const APP_ROUTES = {
   gallery: '/gallery',
   contacts: '/contacts',
   event: '/event',
+  final: '/final',
   product: '/cart',
   admin: '/admin',
   signUp: '/sign-up',

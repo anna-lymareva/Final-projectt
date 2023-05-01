@@ -3,6 +3,8 @@ import { getFormData } from '../../../utils/form';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { APP_EVENTS } from '../../../constants/appEvents';
 import './SignInForm.scss';
+import '../../../core/Router/Link';
+import { APP_ROUTES } from '../../../constants/appRoutes';
 
 class SignInForm extends Component {
   constructor() {
@@ -57,8 +59,12 @@ class SignInForm extends Component {
           <p class="sign-text">Введите пароль<p>
           <input name="password" type="password" class="sign-input form-control" required>
         </label>
-      </div>   
-      <button type="submit" class="btn sign-btn btn-danger mb-5">Вход</button>
+      </div>    
+      <route-link to="${APP_ROUTES.final}">
+      <a href="#">
+          <button type="submit" class="btn sign-btn btn-danger mb-5">Вход</button>
+        </a>
+      </route-link>
     </form>
     `;
   }

@@ -14,6 +14,7 @@ class Navigation extends Component {
 
   getItems() {
     const user = JSON.parse(this.props.user);
+    console.log(user);
     if (user) {
       if (user.email === ADMIN) {
         return appPages.filter((menuItem) => {

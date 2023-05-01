@@ -53,7 +53,7 @@ class RegisterForm extends Component {
   }
 
   componentWillUnmount() {
-    this.addEventListener('click', this.toRegistr);
+    this.removeEventListener('click', this.toRegistr);
     this.removeEventListener('submit', this.onSubmit);
   }
 
@@ -93,7 +93,7 @@ class RegisterForm extends Component {
           <input name="confirm-password" type="password" class="register-input form-control" required>
         </label>
       </div>
-      <button type="submit" class="btn btn-danger mb-5">Зарегистрироваться</button>
+      <button type="submit" class="btn reg-btn btn-danger mb-5">Зарегистрироваться</button>
       <div class="use-info mb-5">
           Уже зарегистрированы? <button class="use-btn">Вход</button>  
       </div>

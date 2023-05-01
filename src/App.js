@@ -8,6 +8,7 @@ import './components/pages/EventPage';
 import './components/pages/ServicePage';
 import './components/pages/ContactsPage';
 import './components/pages/ErrorPage';
+import './components/pages/FinalPage';
 import './components/pages/ProductPage';
 import './components/molecules/Footer';
 import './components/pages/AdminPage/AdminPage';
@@ -137,6 +138,12 @@ class App extends Component {
             path="${routes.signOut.href}" 
             title="Sign out" 
             component="${routes.signOut.component}">
+          </app-route>
+          
+          <app-route 
+            path="${routes.final.href}" 
+            title="Final" 
+            component="${routes.final.component}">
           </app-route>
 
           <app-route 

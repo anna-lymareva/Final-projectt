@@ -41,6 +41,10 @@ export const routes = {
     href: APP_ROUTES.signOut,
     component: 'sign-out-page',
   },
+  final: {
+    href: APP_ROUTES.final,
+    component: 'final-page',
+  },
   error: {
     href: '*',
     component: 'error-page',
