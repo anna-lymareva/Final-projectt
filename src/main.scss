@@ -27,11 +27,17 @@ about-page {
   background-position: center;
 }
 
+gallery-page {
+  display: block;
+  height: 82vh;
+}
+
 sign-in-page {
   background-repeat: no-repeat;
   background-image: linear-gradient(to bottom, rgba(41, 40, 40, 0.925), rgba(0, 0, 0, 0.558)),
     url('./assets/images/signIn.jpg');
   display: block;
+  padding-top: 3%;
   height: 82vh;
   background-size: cover;
   background-position: center;

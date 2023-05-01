@@ -1,7 +1,6 @@
 import { Component } from '../../../core/Component';
 import '../../molecules/Pagination';
 import '../../organisms/CardList';
-// import { convertString } from '../../../utils/convertString';
 import '../../templates/CatalogControls';
 import './ServicePage.scss';
 import { eventEmmiter } from '../../../core/EventEmmiter';
@@ -18,6 +17,7 @@ class ServicePage extends Component {
       limit: 8,
       currentPage: 1,
       categories: [],
+      isLoading: false,
       filteredProducts: [],
     };
   }
@@ -56,7 +56,6 @@ class ServicePage extends Component {
 
   onFilterProductsByCategory = (evt) => {
     const { selectedCategory } = evt.detail;
-    console.log(selectedCategory);
     this.setState((state) => {
       return {
         ...state,

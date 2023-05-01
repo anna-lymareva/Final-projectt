@@ -39,21 +39,26 @@ class SignInForm extends Component {
 
   render() {
     return `
-    <form>
-      <div class="mb-3">
+    <form class="sign-form">
+      <div class="sign">
         <label class="form-label w-100">
-          <p>Email<p>
-          <input name="email" type="emails" class="form-control">
+          <p class="sign-text">Введите email<p>
+          <input name="email" type="emails" class="sign-input form-control">
         </label>
       </div>
-      <div class="mb-3">
+      <div class="sign">
+      <label class=" form-label w-100">
+        <p class="sign-text">Введите номер телефона<p>
+        <input name="phone" type="tel" class="sign-input form-control" required>
+      </label>
+    </div>
+      <div class="sign">
         <label class="form-label w-100">
-          <p>Password<p>
-          <input name="password" type="password" class="form-control" required>
+          <p class="sign-text">Введите пароль<p>
+          <input name="password" type="password" class="sign-input form-control" required>
         </label>
-      </div>
-   
-      <button type="submit" class="btn btn-primary">Sign In</button>
+      </div>   
+      <button type="submit" class="btn sign-btn btn-danger mb-5">Вход</button>
     </form>
     `;
   }

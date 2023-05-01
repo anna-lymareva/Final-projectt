@@ -1,9 +1,16 @@
-.title {
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    color: white;
-    padding: 3% 0;
-  }
-  
+.sign-in-form {
+  box-shadow: 1px 1px 15px rgb(246, 36, 71);
+  border-radius: 10px;
+  width: 30%;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.sign-in-title {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 4% 0;
+}

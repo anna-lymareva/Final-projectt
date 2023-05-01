@@ -10,3 +10,15 @@
 .gallery-description {
   height: 82vh;
 }
+
+.gallery {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
+}
+
+.gallery > img {
+  width: 100%;
+  height: 100%;
+}

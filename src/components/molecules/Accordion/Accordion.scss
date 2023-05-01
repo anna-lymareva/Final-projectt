@@ -1,0 +1,44 @@
+.ac {
+  width: 50%;
+  margin: 2% auto;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.ac .ac-trigger {
+  color: rgb(246, 36, 71);
+}
+
+.ac-panel {
+  color: white;
+}
+
+.terms {
+  color: rgb(246, 36, 71);
+  font-family: 600;
+  font-size: 1.2rem;
+}
+.terms > ul {
+  color: white;
+  font-size: 1rem;
+}
+
+.requirements {
+  color: rgb(246, 36, 71);
+  font-size: 1.2rem;
+  font-family: 600;
+}
+.requirements > ul {
+  font-size: 1rem;
+  color: white;
+}
+
+.responsibilities {
+  color: rgb(246, 36, 71);
+  font-size: 1.2rem;
+  font-family: 600;
+}
+.responsibilities > ul {
+  font-size: 1rem;
+  color: white;
+}

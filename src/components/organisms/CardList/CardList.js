@@ -1,5 +1,5 @@
 import { Component } from '../../../core/Component';
-
+import './CardList.scss';
 import '../../molecules/Card';
 
 class CardList extends Component {
@@ -11,7 +11,7 @@ class CardList extends Component {
     const products = JSON.parse(this.props.products);
 
     return `
-        <div class="row">
+        <div class="container card-list">
             ${products
               .map((item) => {
                 return `

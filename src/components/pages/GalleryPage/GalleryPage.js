@@ -1,6 +1,4 @@
 import { Component } from '../../../core/Component';
-import { slides } from './constants';
-import '../../molecules/Slider';
 import './GalleryPage.scss';
 
 class GalleryPage extends Component {
@@ -8,13 +6,15 @@ class GalleryPage extends Component {
     return `
     <div class="gallery-description container"> 
         <h1 class="gallery-title">Фото работ</h1> 
-        <it-slider height ="400px" slides='${JSON.stringify(slides)}'></it-slider>
-             
+        <div class="gallery container ">
+            <img  src="../../../assets/images/12.jpg" alt="image">
+            <img  src="../../../assets/images/1.jpg" alt="image">
+            <img  src="../../../assets/images/13.jpg" alt="image">
+            <img  src="../../../assets/images/10.png" alt="image">
+        </div>
     </div>
       `;
   }
 }
 
 customElements.define('gallery-page', GalleryPage);
-
-/* <it-slider height ="400px" slides='${JSON.stringify(slides)}'></it-slider>    */

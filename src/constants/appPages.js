@@ -19,7 +19,7 @@ export const appPages = [
   },
   {
     href: APP_ROUTES.event,
-    label: 'Онлайн запись',
+    label: 'Вакансии',
   },
   {
     href: APP_ROUTES.admin,

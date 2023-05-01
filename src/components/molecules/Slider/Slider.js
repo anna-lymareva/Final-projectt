@@ -1,8 +1,6 @@
 import { Component } from '../../../core/Component';
-import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
-
+import Swiper, { Autoplay } from 'swiper';
 import './Slider.scss';
-
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
@@ -13,16 +11,12 @@ class Slider extends Component {
 
   inintSwiper() {
     new Swiper('.it-slider-swiper', {
-      modules: [Navigation, Pagination, Autoplay],
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 3,
+      modules: [Autoplay],
+      slidesPerView: 1,
       spaceBetween: 50,
+      autoplay: {
+        delay: 1000,
+      },
     });
   }
 
@@ -45,9 +39,6 @@ class Slider extends Component {
                 })
                 .join('  ')}
             </div>
-            <div class="swiper-pagination"></div>     
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div> 
     `;
   }

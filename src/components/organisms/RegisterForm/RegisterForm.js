@@ -41,11 +41,19 @@ class RegisterForm extends Component {
     });
   };
 
+  toRegistr = (evt) => {
+    if (evt.target.closest('.use-btn')) {
+      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: `sign-in` });
+    }
+  };
+
   componentDidMount() {
+    this.addEventListener('click', this.toRegistr);
     this.addEventListener('submit', this.onSubmit);
   }
 
   componentWillUnmount() {
+    this.addEventListener('click', this.toRegistr);
     this.removeEventListener('submit', this.onSubmit);
   }
 
@@ -86,6 +94,9 @@ class RegisterForm extends Component {
         </label>
       </div>
       <button type="submit" class="btn btn-danger mb-5">Зарегистрироваться</button>
+      <div class="use-info mb-5">
+          Уже зарегистрированы? <button class="use-btn">Вход</button>  
+      </div>
     </form>
     `;
   }

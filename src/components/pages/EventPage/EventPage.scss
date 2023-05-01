@@ -1,0 +1,36 @@
+.vacancy-container {
+  //   padding: 30px;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.vacancy-info {
+  text-align: center;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.vacancy-contact span {
+  color: rgb(246, 36, 71);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.vacancy-title {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  padding: 1% 0;
+}
+
+.vacancy-title-min {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 1% 5% 0% 5%;
+  font-weight: 600;
+}

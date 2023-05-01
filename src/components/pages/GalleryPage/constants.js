@@ -1,4 +1,4 @@
-export const slides = [
+export const gallery = [
   '<img src="../../../assets/images/12.jpg" alt="image">',
   '<img src="../../../assets/images/1.jpg" alt="image">',
   '<img src="../../../assets/images/2.jpg" alt="image">',

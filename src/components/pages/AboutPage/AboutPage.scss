@@ -38,7 +38,12 @@
   font-weight: 600;
   padding-top: 9%;
   color: rgb(246, 36, 71);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
 }
+
+.swiper-slide {
+  background: transparent !important;
+}
+

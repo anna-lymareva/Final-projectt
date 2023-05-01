@@ -49,7 +49,7 @@ class CategoryItems extends Component {
     return `
         <ul class="navbar-nav">
             ${items
-              .slice(0, 5)
+              .slice(0, 6)
               .map((item) => {
                 const isActive = activeItem?.id === item.id;
                 return `

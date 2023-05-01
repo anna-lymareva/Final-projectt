@@ -3,6 +3,8 @@ import { APP_STORAGE_KEYS } from '../../../constants/appStorageKeys';
 import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { storageService } from '../../../services/StorageService';
+import './EventPage.scss';
+import '../../molecules/Accordion';
 
 class EventPage extends Component {
   constructor() {
@@ -70,18 +72,20 @@ class EventPage extends Component {
 
   render() {
     return `
-      <div class="container">
-      <form class="form">
-      <input type="text" id="name" placeholder="Name">
-      <input type="number" id="attendee" placeholder="Attendees">
-      <textarea id="description" cols="30" rows="10" placeholder="Description..."></textarea>
-      <select id="status">
-          <option value="0">Free</option>
-          <option value="1">Paid</option>
-      </select>
-      <button class="btn btn-primary">Save</button>
-  </form>
-      </div>  
+    <div class="vacancy-container">
+    <div class="vacancy-title mt-0">Вакансии</div>
+    <div class="vacancy-info">
+                <p class="vacancy-text">
+                <span>Beautyhouse</span> - это работодатель, который заботится о каждом сотруднике и создает комфортную и безопасную атмосферу для творческой самореализации, карьерного и личностного роста.
+            </p>
+            <p class="vacancy-contact">Наш дружный коллектив всегда нуждается в квалифицированных специалистах.
+                Если ты готов присоединиться к нам — свяжись с нами по номеру <br><span>+375 25 545 83 56</span> </p>
+            <div class="vacancy-title-min">Кто нам нужен:</div>
+            </div> 
+    <div class="mb-4">
+        <it-accordion></it-accordion> 
+    </div>
+    </div>
       `;
   }
 }
