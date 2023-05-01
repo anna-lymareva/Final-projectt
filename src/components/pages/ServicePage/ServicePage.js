@@ -1,11 +1,12 @@
 import { Component } from '../../../core/Component';
 import '../../molecules/Pagination';
 import '../../organisms/CardList';
+// import { convertString } from '../../../utils/convertString';
 import '../../templates/CatalogControls';
 import './ServicePage.scss';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { APP_EVENTS } from '../../../constants/appEvents';
-import { CATEGORIES } from '../../../constants/categories';
+import '../../molecules/Preloader';
 import { databaseService } from '../../../services/DatabaseService';
 import { FIRESTORE_KEYS } from '../../../constants/firestoreKeys';
 
@@ -14,16 +15,33 @@ class ServicePage extends Component {
     super();
     this.state = {
       products: [],
-      limit: 12,
+      limit: 8,
       currentPage: 1,
+      categories: [],
+      filteredProducts: [],
     };
   }
 
+  setIsLoading = (isLoading) => {
+    this.setState((state) => {
+      return {
+        ...state,
+        isLoading,
+      };
+    });
+  };
+
   sliceData(currentPage = 1) {
     const { limit } = this.state;
+
     const start = (currentPage - 1) * limit;
     const end = currentPage * limit;
-    return this.state.products.slice(start, end);
+
+    const data = this.state.filteredProducts.length
+      ? this.state.filteredProducts
+      : this.state.products;
+
+    return data.slice(start, end);
   }
 
   onChangePaginationPage = (evt) => {
@@ -38,10 +56,13 @@ class ServicePage extends Component {
 
   onFilterProductsByCategory = (evt) => {
     const { selectedCategory } = evt.detail;
+    console.log(selectedCategory);
     this.setState((state) => {
       return {
         ...state,
-        products: this.state.products.filter((item) => item.category.id === selectedCategory.id),
+        filteredProducts: this.state.products.filter(
+          (item) => item.category === selectedCategory.id,
+        ),
         currentPage: 1,
       };
     });
@@ -78,9 +99,31 @@ class ServicePage extends Component {
     }
   };
 
+  setCategories(categories) {
+    this.setState((state) => {
+      return {
+        ...state,
+        categories,
+      };
+    });
+  }
+
+  getAllCategories = async () => {
+    this.setIsLoading(true);
+    try {
+      const data = await databaseService.getCollection(FIRESTORE_KEYS.categories);
+      this.setCategories(data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.setIsLoading(false);
+    }
+  };
+
   componentDidMount() {
     this.getProducts();
     this.sliceData();
+    this.getAllCategories();
     eventEmmiter.on(APP_EVENTS.changePaginationPage, this.onChangePaginationPage);
     eventEmmiter.on(APP_EVENTS.setCategory, this.onFilterProductsByCategory);
     eventEmmiter.on(APP_EVENTS.searchProducts, this.onSearch);
@@ -94,23 +137,26 @@ class ServicePage extends Component {
 
   render() {
     return `
-    <catalog-controls categories='${JSON.stringify(CATEGORIES)}'></catalog-controls>
-    <div class="container mt-5 border-top">
-        <div class="row mt-5">
-          <div class="services-description">
-            <card-list products='${JSON.stringify(
-              this.sliceData(this.state.currentPage),
-            )}'></card-list>
-            <div class=''>
-              <it-pagination 
-                total="${this.state.products.length}"
-                limit="${this.state.limit}"
-                current="${this.state.currentPage}"
-              ></it-pagination>
+    <it-preloader is-loading="${this.state.isLoading}">
+        <catalog-controls categories='${JSON.stringify(this.state.categories)}'></catalog-controls>
+        <div class="container mt-5 border-top">
+            <div class="row mt-5">
+              <div class="services-description">
+                <card-list products='${JSON.stringify(
+                  this.sliceData(this.state.currentPage),
+                )}'></card-list>
+                <div class=''>
+                  <it-pagination 
+                    total="${this.state.products.length}"
+                    limit="${this.state.limit}"
+                    current="${this.state.currentPage}"
+                  ></it-pagination>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+      </it-preloader>
+
     `;
   }
 }

@@ -1,10 +1,6 @@
-// import { APP_EVENTS } from '../../../constants/appEvents';
 import { appPages } from '../../../constants/appPages';
 import { APP_ROUTES } from '../../../constants/appRoutes';
-// import { APP_STORAGE_KEYS } from '../../../constants/appStorageKeys';
 import { Component } from '../../../core/Component';
-// import { eventEmmiter } from '../../../core/EventEmmiter';
-// import { storageService } from '../../../services/StorageService';
 import '../../molecules/MenuItems';
 import './navigation.scss';
 import '../../../core/Router/Link';
@@ -18,7 +14,6 @@ class Navigation extends Component {
 
   getItems() {
     const user = JSON.parse(this.props.user);
-    console.log(user);
     if (user) {
       if (user.email === ADMIN) {
         return appPages.filter((menuItem) => {
@@ -26,7 +21,9 @@ class Navigation extends Component {
         });
       } else {
         return appPages.filter((menuItem) => {
-          return [APP_ROUTES.signUp, APP_ROUTES.signIn].every((item) => item !== menuItem.href);
+          return [APP_ROUTES.signUp, APP_ROUTES.signIn, APP_ROUTES.admin].every(
+            (item) => item !== menuItem.href,
+          );
         });
       }
     } else {

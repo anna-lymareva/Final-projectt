@@ -38,7 +38,7 @@ class Card extends Component {
           <h5 class="card-title pb-5">${title}</h5>
           <div class='price-info d-flex justify-content-between align-items-center pt-3'>
             <strong class="card-price mb-0">
-              ${price} BYN
+              от ${price} BYN
             </strong>
             <button class="card-btn btn">Записаться</button>
           </div>

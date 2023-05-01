@@ -65,7 +65,7 @@ class SignInPage extends Component {
                 <h1 class="text-center title">Вход</h1>
                 <div class="row justify-content-center ">
                     <div class="col-6">
-                        <div class=" p-5">
+                        <div class="p-5">
                             <div class="invalid-feedback d-block">${message}</div>
                             <sign-in-form></sign-in-form>
                         </div>

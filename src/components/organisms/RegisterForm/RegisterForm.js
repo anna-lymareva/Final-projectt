@@ -54,7 +54,7 @@ class RegisterForm extends Component {
     <form class="register-form">
       <div class="register">
         <label class="register-label form-label w-100">
-          <p class="register-text">Email<p>
+          <p class="register-text">Введите email<p>
           <input name="email" type="emails" class="register-input form-control">
         </label>
         ${
@@ -85,8 +85,7 @@ class RegisterForm extends Component {
           <input name="confirm-password" type="password" class="register-input form-control" required>
         </label>
       </div>
-
-      <button type="submit" class="btn">Зарегистрироваться</button>
+      <button type="submit" class="btn btn-danger mb-5">Зарегистрироваться</button>
     </form>
     `;
   }

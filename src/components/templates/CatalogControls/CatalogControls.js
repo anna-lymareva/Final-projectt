@@ -1,6 +1,5 @@
 import { Component } from '../../../core/Component';
 import '../../organisms/Navigation';
-import '../../molecules/MenuItems';
 import '../../molecules/CategoryItems';
 import '../../molecules/SearchForm';
 
@@ -11,9 +10,7 @@ class CatalogControls extends Component {
 
   render() {
     const categories = this.props.categories;
-
     return `
-      <header>
         <nav class="navbar navbar-expand-lg mt-3">
           <div class="container">
             <div class="collapse navbar-collapse d-flex justify-content-between">
@@ -22,7 +19,6 @@ class CatalogControls extends Component {
             </div>
           </div>
         </nav>
-      </header>
       `;
   }
 }

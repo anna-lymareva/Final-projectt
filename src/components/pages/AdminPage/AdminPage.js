@@ -2,7 +2,6 @@ import { APP_EVENTS } from '../../../constants/appEvents';
 import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 import { databaseService } from '../../../services/DatabaseService';
-
 import { forms, menuItems } from './constants';
 import '../../molecules/Tabs';
 import '../../molecules/Tabs';
@@ -18,6 +17,7 @@ class AdminPage extends Component {
     this.state = {
       activeTab: menuItems[0],
       isLoading: false,
+      categories: [],
     };
   }
 
@@ -39,12 +39,22 @@ class AdminPage extends Component {
     });
   };
 
+  setCategories(categories) {
+    this.setState((state) => {
+      return {
+        ...state,
+        categories,
+      };
+    });
+  }
+
   onChangeTab = ({ detail }) => {
     this.setActiveTab(detail.activeItem);
   };
 
   createCategory = ({ detail }) => {
     databaseService.createDocument(FIRESTORE_KEYS.categories, detail.data);
+    this.getAllCategories();
   };
 
   createProduct = ({ detail }) => {
@@ -68,7 +78,20 @@ class AdminPage extends Component {
       });
   };
 
+  getAllCategories = async () => {
+    this.setIsLoading(true);
+    try {
+      const data = await databaseService.getCollection(FIRESTORE_KEYS.categories);
+      this.setCategories(data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.setIsLoading(false);
+    }
+  };
+
   componentDidMount() {
+    this.getAllCategories();
     eventEmmiter.on(APP_EVENTS.changeTab, this.onChangeTab);
     eventEmmiter.on(APP_EVENTS.createCategory, this.createCategory);
     eventEmmiter.on(APP_EVENTS.createProduct, this.createProduct);
@@ -90,7 +113,7 @@ class AdminPage extends Component {
               active-item='${JSON.stringify(this.state.activeTab)}'>
             </it-tabs>
             <div class="mb-3 border-end border-bottom border-start p-3">
-              ${forms[this.state.activeTab.id]}
+              ${forms(this.state)[this.state.activeTab.id]}
             </div>
           </div>
         </div>

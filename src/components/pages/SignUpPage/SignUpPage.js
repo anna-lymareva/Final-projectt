@@ -61,9 +61,9 @@ class SignUpPage extends Component {
     return `
         <it-preloader is-loading="${this.state.isLoading}">
             <div class="container sign-up-form">
-                <h1 class="text-center sign-up-title">Sign Up</h1>
-                <div class="row justify-content-center ">
-                    <div class="col-6">
+                <h1 class="text-center sign-up-title">Регистрация</h1>
+                <div class="row justify-content-center m-0">
+                    <div class="">
                         <div class="">
                             <div class="invalid-feedback d-block">${message}</div>
                             <register-form></register-form>

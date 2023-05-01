@@ -9,7 +9,9 @@ export const menuItems = [
   },
 ];
 
-export const forms = {
-  1: '<category-form></category-form>',
-  2: '<product-form></product-form>',
+export const forms = (state) => {
+  return {
+    1: `<category-form></category-form>`,
+    2: `<product-form categories='${JSON.stringify(state.categories)}'></product-form>`,
+  };
 };
