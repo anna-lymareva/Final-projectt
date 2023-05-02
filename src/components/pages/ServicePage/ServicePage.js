@@ -54,10 +54,14 @@ class ServicePage extends Component {
   onFilterProductsByCategory = async (evt) => {
     const { selectedCategory } = evt.detail;
     const products = await databaseService.getCollection(FIRESTORE_KEYS.products);
+    const filtered =
+      selectedCategory.name === 'Все услуги'
+        ? products
+        : products.filter((item) => item.category === selectedCategory.id);
     this.setState((state) => {
       return {
         ...state,
-        products: products.filter((item) => item.category === selectedCategory.id),
+        products: filtered,
         currentPage: 1,
       };
     });
