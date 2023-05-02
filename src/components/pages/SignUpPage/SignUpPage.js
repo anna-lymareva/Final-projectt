@@ -60,7 +60,7 @@ class SignUpPage extends Component {
     const message = this.state.errorMessage;
     return `
         <it-preloader is-loading="${this.state.isLoading}">
-            <div class="container sign-up-form">
+            <div class="container mt-5 sign-up-form">
                 <h1 class="text-center sign-up-title">Регистрация</h1>
                 <div class="row justify-content-center m-0">
                     <div class="">

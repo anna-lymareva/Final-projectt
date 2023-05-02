@@ -108,7 +108,8 @@ class AdminPage extends Component {
     return `
       <it-preloader is-loading="${this.state.isLoading}">
         <div class="container">
-          <div class="h-75 w-50 tabs-form">
+        <div class="contact-title">Администратор</div> 
+          <div class="h-75 w-50 pt-3 tabs-form">
             <it-tabs 
               menu-items='${JSON.stringify(menuItems)}' 
               active-item='${JSON.stringify(this.state.activeTab)}'>

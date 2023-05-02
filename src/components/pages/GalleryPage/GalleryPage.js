@@ -12,6 +12,8 @@ class GalleryPage extends Component {
             <img  src="../../../assets/images/13.jpg" alt="image">
             <img  src="../../../assets/images/10.png" alt="image">
         </div>
+        <p class="gallery-text">Нас отличает  качество,
+        профессионализм, любовь к своему делу и скорость работы. <br><span> У нас есть все, что Вам нужно для гармоничного образа и хорошего настроения!</span></p>
     </div>
       `;
   }

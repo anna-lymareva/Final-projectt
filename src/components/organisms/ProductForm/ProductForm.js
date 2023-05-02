@@ -94,7 +94,7 @@ class ProductForm extends Component {
             <input name="price" type="number" class="form-control" required>
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <button type="submit" class="btn btn-danger">Сохранить</button>
       </form>
 
     `;

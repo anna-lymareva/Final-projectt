@@ -61,7 +61,7 @@ class SignInPage extends Component {
 
     return `
         <it-preloader is-loading="${this.state.isLoading}">
-            <div class="container sign-in-form">
+            <div class="container mt-5 sign-in-form">
                 <h1 class="text-center sign-in-title">Вход</h1>
                 <div class="row justify-content-center m-0">
                     <div class="">

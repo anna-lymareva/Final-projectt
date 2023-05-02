@@ -26,7 +26,7 @@ class ContactsPage extends Component {
             </li>
             <li class="info">
               <img class="footer-link" src="../../../assets/images/icons/phone.svg" alt="icon">
-              <p>8560</p>                       
+              <p>+375 (29) 8552560</p>                       
             </li>                  
         </ul>            
         </div>   

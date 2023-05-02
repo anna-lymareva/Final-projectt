@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-// import { firebase } from "firebase/firebase-firestore";
 
 class CloudService {
   constructor() {

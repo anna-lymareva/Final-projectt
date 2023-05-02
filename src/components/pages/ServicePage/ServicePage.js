@@ -14,7 +14,7 @@ class ServicePage extends Component {
     super();
     this.state = {
       products: [],
-      limit: 8,
+      limit: 4,
       currentPage: 1,
       categories: [],
       isLoading: false,
@@ -63,12 +63,13 @@ class ServicePage extends Component {
     });
   };
 
-  onSearch = (evt) => {
+  onSearch = async (evt) => {
     const { data } = evt.detail;
+    const products = await databaseService.getCollection(FIRESTORE_KEYS.products);
     this.setState((state) => {
       return {
         ...state,
-        products: this.state.products.filter((item) => {
+        products: products.filter((item) => {
           return item.title.toLowerCase().includes(data.search.toLowerCase());
         }),
         currentPage: 1,

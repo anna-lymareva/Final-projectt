@@ -23,7 +23,7 @@ export const appPages = [
   },
   {
     href: APP_ROUTES.admin,
-    label: 'Admin',
+    label: 'Администратор',
   },
   {
     href: APP_ROUTES.signUp,

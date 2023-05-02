@@ -22,7 +22,7 @@ class AboutPage extends Component {
   render() {
     return `
     <header>
-         <div class="header-description pt-5">
+         <div class="header-description">
               <div class="header-title">
                   <it-slider  height="100px" width="900px" slides='${JSON.stringify(
                     slides,
