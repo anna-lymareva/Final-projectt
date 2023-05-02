@@ -60,11 +60,9 @@ class SignInForm extends Component {
           <input name="password" type="password" class="sign-input form-control" required>
         </label>
       </div>    
-      <route-link to="${APP_ROUTES.final}">
-      <a href="#">
+     
           <button type="submit" class="btn sign-btn btn-danger mb-5">Вход</button>
-        </a>
-      </route-link>
+
     </form>
     `;
   }

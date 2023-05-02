@@ -58,14 +58,14 @@ class ProductForm extends Component {
     return `
       <form>
         <div class="mb-3">
-          <label class="form-label w-100">
-            <p>Title<p>
+          <label class="form-label text-danger w-100">
+            <p>Заголовок<p>
             <input name="title" type="text" class="form-control">
           </label>
         </div>
         <div class="mb-3">
-          <label class="form-label w-100">
-            <p>Category<p>
+          <label class="form-label text-danger w-100">
+            <p>Категория<p>
             <select class="form-select" aria-label="Floating label select example" name="category">
             ${categories
               .map((item) => {
@@ -76,8 +76,8 @@ class ProductForm extends Component {
           </label>
         </div>
         <div class="mb-3">
-          <label class="form-label w-100">
-            <p>Download a file</p>
+          <label class="form-label text-danger w-100">
+            <p>Загрузка изображения</p>
             <input 
               name="preview" 
               class="form-control preview-input" 
@@ -89,12 +89,12 @@ class ProductForm extends Component {
           </label>
         </div>
         <div class="mb-3">
-          <label class="form-label w-100">
-            <p>Price<p>
+          <label class="form-label text-danger w-100">
+            <p>Цена<p>
             <input name="price" type="number" class="form-control" required>
           </label>
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
       </form>
 
     `;

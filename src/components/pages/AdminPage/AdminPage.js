@@ -8,6 +8,7 @@ import '../../molecules/Tabs';
 import '../../molecules/Preloader';
 import '../../organisms/CategoryForm';
 import '../../organisms/ProductForm';
+import './AdminPage.scss';
 import { FIRESTORE_KEYS } from '../../../constants/firestoreKeys';
 import { firebaseStorageService } from '../../../services/FirebaseStorageService';
 
@@ -107,7 +108,7 @@ class AdminPage extends Component {
     return `
       <it-preloader is-loading="${this.state.isLoading}">
         <div class="container">
-          <div class="mt-5">
+          <div class="h-75 w-50 tabs-form">
             <it-tabs 
               menu-items='${JSON.stringify(menuItems)}' 
               active-item='${JSON.stringify(this.state.activeTab)}'>

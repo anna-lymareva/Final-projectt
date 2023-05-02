@@ -1,11 +1,11 @@
 export const menuItems = [
   {
     id: '1',
-    label: 'Category Form',
+    label: 'Категории',
   },
   {
     id: '2',
-    label: 'Product Form',
+    label: 'Услуги',
   },
 ];
 

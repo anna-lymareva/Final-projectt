@@ -40,7 +40,7 @@ class SignInPage extends Component {
     try {
       const user = await authService.signIn(data.email, data.password);
       eventEmmiter.emit(APP_EVENTS.authorizeUser, { user });
-      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.service });
+      eventEmmiter.emit(APP_EVENTS.changeRoute, { target: APP_ROUTES.final });
     } catch (error) {
       this.setError(error.message);
     } finally {

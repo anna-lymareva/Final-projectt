@@ -2,6 +2,8 @@ import { APP_EVENTS } from '../../../constants/appEvents';
 import { Component } from '../../../core/Component';
 import { eventEmmiter } from '../../../core/EventEmmiter';
 
+import './CategoryForm.Scss';
+
 class CategoryForm extends Component {
   onSubmit = (evt) => {
     evt.preventDefault();
@@ -26,12 +28,12 @@ class CategoryForm extends Component {
   render() {
     return `
       <form>
-        <label class="form-label">Create category</label>
+        <label class="form-label text-danger">Создайте категорию</label>
         <input 
           name="name" 
           type="text" 
-          class="form-control" 
-          placeholder="Type a category name"
+          class="form-control category-inputs" 
+          placeholder="Имя категории"
           required
         >
       </form> 

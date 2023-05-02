@@ -42,7 +42,7 @@ class Pagination extends Component {
     return `
         <ul class="pagination">
           <li class="page-item ${isFirst ? 'disabled' : ''}">
-            <a class="page-link previous-link" href="#">Previous</a>
+            <a class="page-link previous-link" href="#">Пред.</a>
           </li>
           ${count
             .map((_, index) => {
@@ -60,7 +60,7 @@ class Pagination extends Component {
             })
             .join(' ')}
           <li class="page-item ${isLast ? 'disabled' : ''}">
-            <a class="page-link next-link" href="#">Next</a>
+            <a class="page-link next-link" href="#">След.</a>
           </li>
         </ul>
       </nav>
