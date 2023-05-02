@@ -18,7 +18,6 @@ class ServicePage extends Component {
       currentPage: 1,
       categories: [],
       isLoading: false,
-      filteredProducts: [],
     };
   }
 
@@ -37,9 +36,7 @@ class ServicePage extends Component {
     const start = (currentPage - 1) * limit;
     const end = currentPage * limit;
 
-    const data = this.state.filteredProducts.length
-      ? this.state.filteredProducts
-      : this.state.products;
+    const data = this.state.products;
 
     return data.slice(start, end);
   }
@@ -54,14 +51,13 @@ class ServicePage extends Component {
     window.scrollTo(0, { behavior: 'smooth' });
   };
 
-  onFilterProductsByCategory = (evt) => {
+  onFilterProductsByCategory = async (evt) => {
     const { selectedCategory } = evt.detail;
+    const products = await databaseService.getCollection(FIRESTORE_KEYS.products);
     this.setState((state) => {
       return {
         ...state,
-        filteredProducts: this.state.products.filter(
-          (item) => item.category === selectedCategory.id,
-        ),
+        products: products.filter((item) => item.category === selectedCategory.id),
         currentPage: 1,
       };
     });
